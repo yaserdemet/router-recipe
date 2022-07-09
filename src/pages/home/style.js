@@ -1,15 +1,20 @@
 import styled from "styled-components";
 
 const Div = styled.div`
-  margin-top: 5rem;
+  margin-top: 4.3rem;
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
 `;
 export default Div;
 
 export const Main = styled.main`
+  /* border: 2px solid black; */
+  width: 25%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  border: 2px red solid;
-  width: 60%;
 `;
