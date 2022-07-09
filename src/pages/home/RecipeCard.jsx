@@ -3,8 +3,10 @@ import { Main } from "./style";
 import Div from "./style";
 import "../../App.css";
 import { useNavigate } from "react-router";
+import { useState, useEffect } from 'react';
 
-const RecipeCard = ({ image, label, source }) => {
+
+const RecipeCard = ({ image, label, source , itemRecipe}) => {
   const navigate = useNavigate();
   return (
     
@@ -13,7 +15,7 @@ const RecipeCard = ({ image, label, source }) => {
           <img src={image} alt={label} />
         </div>
         <h3>{label}</h3>
-       <button onClick={() => navigate(`/`)}  className="btn btn-success px-4 mx-3">MORE INFO</button>
+       <button onClick={() => navigate("/Home/itemRecipe.label" , {state : {itemRecipe}}) }  className="btn btn-success px-4 mx-3">MORE INFO</button>
       </Main>
     
   );

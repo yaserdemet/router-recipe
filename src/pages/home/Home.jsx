@@ -97,6 +97,8 @@ const Home = () => {
                 image={image}
                 label={label}
                 source={source}
+                itemRecipe={item.recipe}
+
               />
            
             );

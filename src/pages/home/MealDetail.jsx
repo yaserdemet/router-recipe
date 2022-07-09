@@ -1,9 +1,19 @@
-import React from 'react'
+import React from "react";
+import { useNavigate } from "react-router";
+import { useParams , useLocation} from "react-router";
+
 
 const MealDetail = () => {
-  return (
-    <div></div>
-  )
-}
+  const navigate = useNavigate();
+  const {label} = useParams();
+  const {state} = useLocation()
 
-export default MealDetail
+ 
+  
+
+  return <div>
+     <h1>{label}</h1>
+  </div>;
+};
+
+export default MealDetail;
