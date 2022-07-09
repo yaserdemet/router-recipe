@@ -1,9 +1,9 @@
 import React from 'react'
 import Div from "./style"
 import { useState } from 'react'
-import { useEffect } from 'react'
+// import { useEffect } from 'react'
 import  {useNavigate} from 'react-router-dom'
-import Modal from '../../components/modul/Modal'
+
 
 
 
@@ -16,11 +16,17 @@ const Login = () => {
     password: ''
 })
 
-const [modal, setModal] = useState(false)
+
 
 const handleSubmit = (e) => {
     if(!user.email || !user.password){
-      
+      setUser({
+        email: '',
+        password: ''
+      })
+    
+      e.preventDefault()
+      alert("Please all required fields")
         return false;
     }
    
@@ -51,7 +57,7 @@ const handleChange = (e) => {
    
             <div>
             <label htmlFor="exampleInputEmail1" className="form-label">Email address</label>
-            <input type="email" onChange={handleChange} name="email" className="form-control" value={user.email} id="exampleInputEmail1" aria-describedby="emailHelp"/>
+            <input autoFocus type="email" onChange={handleChange} name="email" className="form-control form1" value={user.email} id="exampleInputEmail1" aria-describedby="emailHelp"/>
             <div id="emailHelp" className="form-text">We'll never share your email with anyone else.</div>
           </div>
           <div className="mb-3">
@@ -59,7 +65,7 @@ const handleChange = (e) => {
             <input onChange={handleChange} name="password"  type="password" value={user.password} className="form-control" id="exampleInputPassword1"/>
           </div>
           
-          <button type="submit" onClick={() => setModal(!modal)} className="btn btn-primary" data-bs-toggle="modal" data-bs-target="#edit-modal">Submit</button>
+          <button type="submit"  className="btn btn-primary" >Submit</button>
         </form>
       
 
