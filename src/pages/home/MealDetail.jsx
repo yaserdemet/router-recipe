@@ -1,35 +1,50 @@
-import React from 'react'
-import axios from 'axios'
-import { useLocation, useNavigate } from 'react-router-dom'
-
+import React from "react";
+import axios from "axios";
+import { useLocation, useNavigate } from "react-router-dom";
+import { useParams } from "react-router-dom";
+import { Card } from "./style";
+import {Link, NavLink} from "react-router-dom";
+import RecipeCard from "./RecipeCard";
 
 const MealDetail = () => {
+  const navigate = useNavigate();
+  const { label } = useParams();
 
-  // const {label} = useParams()
-
-const {state} = useLocation()
-const {itemrecipe} = state
-console.log(itemrecipe)
-
-
+  const { state } = useLocation();
+  const { itemrecipe } = state;
+  console.log(itemrecipe);
 
   return (
-    <div>
-   {
-    <div>
-    <h2>{itemrecipe.label}</h2>
-    <p>Calories : {itemrecipe.calories.toFixed()}</p>
-    <p>Health Label : {itemrecipe.healthLabels[0] }</p>
-    <p>{itemrecipe.healthLabels[3] }</p>
-    <p>Dish Type : {itemrecipe.dishType}</p>
-    <p>{itemrecipe.ingredients.map((item) => {
-      return <p>{item.text}</p>
-    })}</p>
-    
-    </div>
-   }
-
-    </div>
-  )
-}
-export default MealDetail
+   
+    <Card>
+      {
+        
+        <div className="cards">
+          <div className="card" >
+            <img src={itemrecipe.image} className="card-img-top" alt="..." />
+            <div className="card-body">
+              <h5 className="card-title">{itemrecipe.label}</h5>
+              <p className="card-text">{itemrecipe.calories.toFixed()}</p>
+            </div>
+            <ul className="list-group list-group-flush">
+              <li className="list-group-item">{itemrecipe.healthLabels[0]}</li>
+              <li className="list-group-item">{itemrecipe.dishType}</li>
+              <li classNameName="list-group-item">
+                {itemrecipe.healthLabels[3]}
+              </li>
+            </ul>
+            <div classNameName="card-body">
+              <button className="btn btn-dark mx-3" onClick={() => navigate(-1)} classNameName="card-link">
+                Previous Page
+              </button>
+              <button className="btn btn-outline-dark mx-3" onClick={() => navigate("/About")} classNameName="card-link">
+               About
+              </button>
+            </div>
+          </div>
+        </div>
+      }
+    </Card>
+  );
+};
+export default MealDetail;

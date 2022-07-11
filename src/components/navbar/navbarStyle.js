@@ -13,14 +13,14 @@ const Div = styled.div`
     img:nth-child(2){
         height: 6rem;
     }
-    img:hover {
+    /* img:hover {
       
         cursor: pointer;
         transform: scale(1.1);
         transform: rotate(20deg);
         transition: all 0.5s ease-in-out;
        
-    }
+    } */
 
 
 
@@ -33,8 +33,8 @@ const Div = styled.div`
     
     }
     a:hover{
-      text-shadow:  0 0 10px rgba(0,0,0,0.5);
-    }
+      text-shadow:  0 0 10px rgba(22,77,123,0.5)   ;
+    } 
 
     
     

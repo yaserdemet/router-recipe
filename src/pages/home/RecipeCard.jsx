@@ -8,6 +8,7 @@ import { useState, useEffect } from 'react';
 
 const RecipeCard = ({ image, label, source , itemrecipe , data1}) => {
   console.log(data1);
+  const style = {fontSize : "1rem"}
  
 
   const navigate = useNavigate();
@@ -17,8 +18,8 @@ const RecipeCard = ({ image, label, source , itemrecipe , data1}) => {
         <div className="cart">
           <img src={image} alt={label} />
         </div>
-        <h3>{label}</h3>
-       <button onClick={() => navigate(`/Home/${label}` ,{state : {itemrecipe}}) } className="btn btn-success px-4 mx-3">MORE INFO</button>
+        <h3 style={style}>{label}</h3>
+       <button onClick={() => navigate(`/Home/${label}` ,{state : {itemrecipe}}) } className="btn btn-dark px-4 mx-3">MORE INFO</button>
       </Main>
     
   );

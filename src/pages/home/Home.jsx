@@ -44,7 +44,7 @@ const Home = () => {
       <Navbar />
       <Div>
         <form onSubmit={handleSubmit}>
-          <div>
+        
           <input
           
           class="form-control"
@@ -57,11 +57,11 @@ const Home = () => {
           value={query}
           onChange={(e) => setQuery(e.target.value)}
         />
-          </div>
+        
           
-          <div>
+          
           <select
-            // style={{ display: "inline" }}
+             style={{ display: "inline" }}
             className="form-select"
             id="inputGroupSelect01"
             name="meal"
@@ -74,10 +74,10 @@ const Home = () => {
             <option value="Snack">Snack</option>
             <option value="Teatime">Teatime</option>
           </select>
-          </div>
+          
           <button
             // style={{ display: "inline" }}
-            className="btn btn-success px-4 mx-3"
+            className="btn btn-dark px-4 my-3"
           >
             Search
           </button>

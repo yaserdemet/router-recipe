@@ -7,6 +7,7 @@ import {Link, NavLink} from 'react-router-dom'
 const Navbar = () => {
   return (
   <Div>
+    
         <img src={image} alt="" />
 
         <NavLink style={({ isActive }) => ({ color: isActive && '#859445' })}  to="/About">About Us</NavLink>
