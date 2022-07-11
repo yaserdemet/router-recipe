@@ -8,8 +8,9 @@ import AppRouter from './router/AppRouter';
 function App() {
   return (
   <div>
- <Styled />
-   <AppRouter />
+    <Styled />
+    {/* // styled componenti styled-components in global değişkeni olarak tanımladık. */}
+    <AppRouter />
 
   </div>
   );

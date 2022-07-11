@@ -27,7 +27,7 @@ const Home = () => {
     const { data } = await axios.get(url);
     setData(data.hits);
     console.log(data.hits);
-    console.log("dawdaw");
+   
   };
 
   const handleSubmit = (e) => {
@@ -98,6 +98,7 @@ const Home = () => {
                 label={label}
                 source={source}
                 itemRecipe={item.recipe}
+                data1={data}
 
               />
            
