@@ -6,7 +6,7 @@ import { useNavigate } from "react-router";
 import { useState, useEffect } from 'react';
 
 
-const RecipeCard = ({ image, label, source , itemRecipe , data1}) => {
+const RecipeCard = ({ image, label, source , itemrecipe , data1}) => {
   console.log(data1);
  
 
@@ -18,7 +18,7 @@ const RecipeCard = ({ image, label, source , itemRecipe , data1}) => {
           <img src={image} alt={label} />
         </div>
         <h3>{label}</h3>
-       <button onClick={() => navigate(`/Home/${label}` ,{state : {data1}}) } className="btn btn-success px-4 mx-3">MORE INFO</button>
+       <button onClick={() => navigate(`/Home/${label}` ,{state : {itemrecipe}}) } className="btn btn-success px-4 mx-3">MORE INFO</button>
       </Main>
     
   );
