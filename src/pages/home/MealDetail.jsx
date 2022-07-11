@@ -1,15 +1,11 @@
 import React from 'react'
 import axios from 'axios'
-import { useState, useEffect } from 'react'
 import { useLocation, useNavigate } from 'react-router-dom'
-import { useParams } from 'react-router-dom'
+
 
 const MealDetail = () => {
-  const navigate = useNavigate()
-  const {label} = useParams()
 
-
-
+  // const {label} = useParams()
 
 const {state} = useLocation()
 const {itemrecipe} = state
@@ -21,7 +17,7 @@ console.log(itemrecipe)
     <div>
    {
     <div>
-      <h2>{itemrecipe.label}</h2>
+    <h2>{itemrecipe.label}</h2>
     <p>Calories : {itemrecipe.calories.toFixed()}</p>
     <p>Health Label : {itemrecipe.healthLabels[0] }</p>
     <p>{itemrecipe.healthLabels[3] }</p>

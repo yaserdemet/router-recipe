@@ -38,7 +38,7 @@ const Main = styled.main`
         display: flex;
         flex-direction: column;
         justify-content: center;
-        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+     
     }
    
 
