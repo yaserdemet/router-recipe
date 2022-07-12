@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
 const Div = styled.div`
- 
   margin-top: 1rem;
   /* margin-bottom: 1rem; */
   display: flex;
@@ -20,15 +19,18 @@ export const Main = styled.main`
   align-items: center;
   font-size: 0.7rem;
   border: 2px #444 solid;
- 
- 
+  img {
+    width: 100%;
+    height: auto;
+    
+  }
 `;
 
-export const Card = styled.article `
-display: flex;
-padding: 1rem;
-margin-top: 1rem;
-align-items: center;
-justify-content: center;
-
-`
+export const Card = styled.article`
+  display: flex;
+  padding: 1rem;
+  margin-top: 1rem;
+  align-items: center;
+  justify-content: center;
+  height: 30rem;
+`;

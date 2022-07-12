@@ -8,7 +8,7 @@ const Footer1 = styled.footer`
   justify-content: space-between;
   position: fixed;
   bottom: 0;
-  color: #DAFDBA;
+  color: #dafdba;
   width: 100%;
   .icons {
     display: flex;
