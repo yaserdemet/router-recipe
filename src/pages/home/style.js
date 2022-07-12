@@ -2,8 +2,8 @@ import styled from "styled-components";
 
 const Div = styled.div`
  
-  margin-top: 4.3rem;
-  margin-bottom: 1rem;
+  margin-top: 1rem;
+  /* margin-bottom: 1rem; */
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -20,7 +20,7 @@ export const Main = styled.main`
   align-items: center;
   font-size: 0.7rem;
   border: 2px #444 solid;
-  border-radius: 10px;
+ 
  
 `;
 

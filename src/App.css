@@ -1,21 +1,18 @@
 .slugg {
-   
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  margin-bottom: 25rem;
 
+  padding: 0;
 }
 .rot {
-    width: 90%;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    margin: auto;
-    gap: 5rem;
-    
+  width: 90%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: auto;
+  gap: 5rem;
 }
 .cart {
-    width:300px;
+  width: 300px;
 }
