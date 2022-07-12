@@ -24,13 +24,13 @@ const MealDetail = () => {
             <img src={itemrecipe.image} className="card-img-top" alt="..." />
             <div className="card-body">
               <h5 className="card-title">{itemrecipe.label}</h5>
-              <p className="card-text">{itemrecipe.calories.toFixed()}</p>
+              <p className="card-text">Calories : {itemrecipe.calories.toFixed()}</p>
             </div>
             <ul className="list-group list-group-flush">
-              <li className="list-group-item">{itemrecipe.healthLabels[0]}</li>
-              <li className="list-group-item">{itemrecipe.dishType}</li>
+              <li className="list-group-item">Status : {itemrecipe.healthLabels[0].toUpperCase()}</li>
+              <li className="list-group-item">Type : {itemrecipe.dishType}</li>
               <li classNameName="list-group-item">
-                {itemrecipe.healthLabels[3]}
+                {itemrecipe.healthLabels[3].toUpperCase()}
               </li>
             </ul>
             <div classNameName="card-body">

@@ -2,7 +2,6 @@ import styled from "styled-components";
 
 const Div = styled.div`
   margin-top: 1rem;
-  /* margin-bottom: 1rem; */
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -29,8 +28,10 @@ export const Main = styled.main`
 export const Card = styled.article`
   display: flex;
   padding: 1rem;
-  margin-top: 1rem;
+
   align-items: center;
   justify-content: center;
   height: 30rem;
+  background-color: #011F26;
+  height: 100vh;
 `;
